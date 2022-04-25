@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitAssessment.Api", "GitAssessment.Api\GitAssessment.Api.csproj", "{CF6A6BA0-A769-427E-A99E-BA44C3DB3332}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitAssessment.Api", "GitAssessment.Api\GitAssessment.Api.csproj", "{CF6A6BA0-A769-427E-A99E-BA44C3DB3332}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitAssessment.Domain", "GitAssessment.Domain\GitAssessment.Domain.csproj", "{A26AF2C2-12DC-4A4A-909C-F84FE75F4B94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitAssessment.Domain", "GitAssessment.Domain\GitAssessment.Domain.csproj", "{A26AF2C2-12DC-4A4A-909C-F84FE75F4B94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitAssessment.Services", "GitAssessment.Services\GitAssessment.Services.csproj", "{79F846DC-8A18-45BB-86C4-6D63D92DDB5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{A26AF2C2-12DC-4A4A-909C-F84FE75F4B94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A26AF2C2-12DC-4A4A-909C-F84FE75F4B94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A26AF2C2-12DC-4A4A-909C-F84FE75F4B94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79F846DC-8A18-45BB-86C4-6D63D92DDB5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79F846DC-8A18-45BB-86C4-6D63D92DDB5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79F846DC-8A18-45BB-86C4-6D63D92DDB5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79F846DC-8A18-45BB-86C4-6D63D92DDB5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
