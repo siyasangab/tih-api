@@ -1,3 +1,6 @@
+using GitAssessment.Domain.Context;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -15,6 +18,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+// DbContext
+builder.Services.AddDbContextPool<AppDbContext>(options =>
+{
+    options.UseNpgsql(builder.Configuration.GetConnectionString("AppDbContext"));
+});
 
 app.UseAuthorization();
 
