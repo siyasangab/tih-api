@@ -1,8 +1,8 @@
-﻿
+﻿using GitAssessent.Domain.Dto.Response;
 using GitAssessment.Domain.Context;
 using Microsoft.EntityFrameworkCore;
 
-namespace GitAssement.Services.Domain.WordTypes
+namespace GitAssessment.Services.Domain.WordTypes
 {
     public class WordTypeService : IWordTypesService
     {
@@ -11,6 +11,13 @@ namespace GitAssement.Services.Domain.WordTypes
         public WordTypeService(AppDbContext appDbContext)
         {
             this.appDbContext = appDbContext;
+        }
+
+        public async Task<IEnumerable<WordTypeDto>> GetAll()
+        {
+            var wordTypes = await appDbContext.WordTypes.ToListAsync();
+
+            return wordTypes.Select(x => new WordTypeDto(x));
         }
     }
 }

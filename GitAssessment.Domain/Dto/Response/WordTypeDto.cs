@@ -1,6 +1,6 @@
 ﻿using GitAssessment.Domain.Entities;
 
-namespace GitAssement.Domain.Dto.Response
+namespace GitAssessent.Domain.Dto.Response
 {
     public class WordTypeDto
     {

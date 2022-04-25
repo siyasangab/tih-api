@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GitAssessment.Domain\GitAssessment.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

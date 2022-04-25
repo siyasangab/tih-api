@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GitAssessment.Domain\GitAssessment.Domain.csproj" />
+    <ProjectReference Include="..\GitAssessment.Services\GitAssessment.Services.csproj" />
   </ItemGroup>
 
 </Project>

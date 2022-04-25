@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using GitAssessment.Services.Domain.WordTypes;
+using Microsoft.AspNetCore.Mvc;
 
 namespace GitAssement.Api.Controllers
 {
@@ -6,10 +7,19 @@ namespace GitAssement.Api.Controllers
     [ApiController]
     public class WordTypesController : ControllerBase
     {
+        private readonly IWordTypesService wordTypesService;
+
+        public WordTypesController(IWordTypesService wordTypesService)
+        {
+            this.wordTypesService = wordTypesService;
+        }
+
         [HttpGet]
         public async Task<IActionResult> List()
         {
-            return Ok();
+            var wordTypes = await wordTypesService.GetAll();
+
+            return Ok(wordTypes);
         }
     }
 }
