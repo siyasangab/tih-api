@@ -1,4 +1,5 @@
 using GitAssessment.Domain.Context;
+using GitAssessment.Services.Domain.Words;
 using GitAssessment.Services.Domain.WordTypes;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,6 +14,7 @@ builder.Services.AddSwaggerGen();
 
 // Services
 builder.Services.AddScoped<IWordTypesService, WordTypeService>();
+builder.Services.AddScoped<IWordsService, WordsService>();
 
 // DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
