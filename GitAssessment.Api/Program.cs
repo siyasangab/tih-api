@@ -1,4 +1,5 @@
 using GitAssessment.Domain.Context;
+using GitAssessment.Services.Caching;
 using GitAssessment.Services.Domain.Words;
 using GitAssessment.Services.Domain.WordTypes;
 using Microsoft.EntityFrameworkCore;
@@ -15,12 +16,18 @@ builder.Services.AddSwaggerGen();
 // Services
 builder.Services.AddScoped<IWordTypesService, WordTypeService>();
 builder.Services.AddScoped<IWordsService, WordsService>();
+builder.Services.AddScoped<ICacheService, CacheService>();
 
 // DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("AppDbContext"));
 });
+
+
+// Caching
+builder.Services.AddResponseCaching();
+builder.Services.AddDistributedMemoryCache();
 
 var app = builder.Build();
 
@@ -45,5 +52,7 @@ app.UseCors(x => x.AllowAnyMethod()
     .AllowAnyHeader()
     .WithOrigins("http://127.0.0.1:4200")
     .AllowCredentials());
+
+app.UseResponseCaching();
 
 app.Run();

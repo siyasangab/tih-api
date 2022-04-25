@@ -16,6 +16,7 @@ namespace GitAssement.Api.Controllers
 
         [HttpGet]
         [Route("by-type")]
+        [ResponseCache(Duration = 300)]
         public async Task<IActionResult> GetByType([FromQuery] long wordTypeId)
         {
             var words = await wordsService.GetByWordType(wordTypeId);

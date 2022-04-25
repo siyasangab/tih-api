@@ -15,6 +15,7 @@ namespace GitAssement.Api.Controllers
         }
 
         [HttpGet]
+        [ResponseCache(Duration = 300)]
         public async Task<IActionResult> List()
         {
             var wordTypes = await wordTypesService.GetAll();

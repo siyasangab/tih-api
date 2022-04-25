@@ -4,6 +4,8 @@ namespace GitAssessent.Domain.Dto.Response
 {
     public class WordTypeDto
     {
+        public WordTypeDto() { }
+
         public WordTypeDto(WordType wordType)
         {
             Id = wordType.Id;
