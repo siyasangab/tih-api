@@ -1,5 +1,6 @@
 using GitAssessment.Domain.Context;
 using GitAssessment.Services.Caching;
+using GitAssessment.Services.Domain.Sentences;
 using GitAssessment.Services.Domain.Words;
 using GitAssessment.Services.Domain.WordTypes;
 using Microsoft.EntityFrameworkCore;
@@ -17,6 +18,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IWordTypesService, WordTypeService>();
 builder.Services.AddScoped<IWordsService, WordsService>();
 builder.Services.AddScoped<ICacheService, CacheService>();
+builder.Services.AddScoped<ISentencesService, SentencesService>();
 
 // DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
