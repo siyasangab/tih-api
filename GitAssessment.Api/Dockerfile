@@ -2,11 +2,13 @@
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 WORKDIR /app
-EXPOSE 80
+EXPOSE 5000
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["GitAssessment.Api/GitAssessment.Api.csproj", "GitAssessment.Api/"]
+COPY ["GitAssessment.Domain/GitAssessment.Domain.csproj", "GitAssessment.Domain/"]
+COPY ["GitAssessment.Services/GitAssessment.Services.csproj", "GitAssessment.Services/"]
 RUN dotnet restore "GitAssessment.Api/GitAssessment.Api.csproj"
 COPY . .
 WORKDIR "/src/GitAssessment.Api"

@@ -25,7 +25,7 @@ namespace GitAssessment.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Submit(SubmitSentenceDto submitSentence)
+        public async Task<IActionResult> Submit([FromBody] SubmitSentenceDto submitSentence)
         {
             var dto = await sentencesService.Submit(submitSentence);
 
