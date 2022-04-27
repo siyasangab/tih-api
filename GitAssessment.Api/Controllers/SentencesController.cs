@@ -1,6 +1,5 @@
 ﻿using GitAssessment.Domain.Dto.Request;
 using GitAssessment.Services.Domain.Sentences;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GitAssessment.Api.Controllers

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GitAssessment.Domain.Context
 {
-    public class AppDbContext: DbContext
+    public class AppDbContext : DbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
@@ -13,7 +13,8 @@ namespace GitAssessment.Domain.Context
 
         public DbSet<Sentence> Sentences { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder) {
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
             var wordTypes = new List<WordType>()
             {
                 new WordType() { Id = 1, Name = "Noun" },

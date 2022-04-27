@@ -27,7 +27,7 @@ namespace GitAssessment.Services.Domain.Words
                 return cached;
             }
 
-            var words = await appDbContext.Words          
+            var words = await appDbContext.Words
                 .Where(x => x.WordTypeId == wordTypeId)
                 .OrderBy(x => x.Title)
                 .Select(x => new WordDto(x))
